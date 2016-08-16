@@ -27,13 +27,11 @@ int main(int argc, const char * argv[])
                                        @"Creating an egregious amount of space between printed text and the auto text native from NSLog"
                                        ]];
         [someCharacter setHeight:71];
-        
         NSLog(@"%@", someCharacter);
         
         printf("Want to change my age?\n");
         [someCharacter setAge: [getNSNumberFromUser(1, 100, "How old do you think I ought to be?\n") integerValue]];
         NSLog(@"%@", someCharacter);
-        
     }
     return 0;
 }

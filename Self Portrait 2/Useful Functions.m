@@ -14,7 +14,7 @@ NSNumber *getNSNumberFromUser(int choice_Min, int choice_Max, char *prompt)
     int choice = (choice_Min - 1);
     while (choice < choice_Min || choice > choice_Max)
     {
-        printf("Valid choices: 0..%d\nEnter %d for prompt\n:", choice_Max, choice_Max+1);
+        printf("Valid choices: %d..%d\nEnter %d for prompt\n:", choice_Min, choice_Max, choice_Max+1);
         fpurge(stdin);
         scanf("%d", &choice);
         while (choice < choice_Min || choice >= choice_Max+1)
@@ -22,11 +22,11 @@ NSNumber *getNSNumberFromUser(int choice_Min, int choice_Max, char *prompt)
             while (choice == (choice_Max+1))
             {
                 printf("\n%s\n", prompt);
-                printf("Valid choices: 0..%d\nEnter %d for prompt\n:", choice_Max, choice_Max+1);
+                printf("Valid choices: %d..%d\nEnter %d for prompt\n:", choice_Min, choice_Max, choice_Max+1);
                 fpurge(stdin);
                 scanf("%d", &choice);
             }
-            printf("Valid choices: 0..%d\nEnter %d for prompt\n:", choice_Max, choice_Max+1);
+            printf("Valid choices: %d..%d\nEnter %d for prompt\n:", choice_Min, choice_Max, choice_Max+1);
             fpurge(stdin);
             scanf("%d", &choice);
         }
@@ -41,7 +41,7 @@ int getIntFromUser(int choice_Min, int choice_Max, char *prompt)
     int choice = (choice_Min - 1);
     while (choice < choice_Min || choice > choice_Max)
     {
-        printf("Valid choices: 0..%d\nEnter %d for prompt\n:", choice_Max, choice_Max+1);
+        printf("Valid choices: %d..%d\nEnter %d for prompt\n:", choice_Min, choice_Max, choice_Max+1);
         fpurge(stdin);
         scanf("%d", &choice);
         while (choice < choice_Min || choice >= choice_Max+1)
@@ -49,11 +49,11 @@ int getIntFromUser(int choice_Min, int choice_Max, char *prompt)
             while (choice == (choice_Max+1))
             {
                 printf("\n%s\n", prompt);
-                printf("Valid choices: 0..%d\nEnter %d for prompt\n:", choice_Max, choice_Max+1);
+                printf("Valid choices: %d..%d\nEnter %d for prompt\n:", choice_Min, choice_Max, choice_Max+1);
                 fpurge(stdin);
                 scanf("%d", &choice);
             }
-            printf("Valid choices: 0..%d\nEnter %d for prompt\n:", choice_Max, choice_Max+1);
+            printf("Valid choices: %d..%d\nEnter %d for prompt\n:", choice_Min, choice_Max, choice_Max+1);
             fpurge(stdin);
             scanf("%d", &choice);
         }

@@ -9,6 +9,8 @@
 #import "Character.h"
 
 @implementation Character
+
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"\n\n\n\n\n\n\n\n\nHello! My name is %@ and I am %@ years old! My interests are %@ I am %@ inches tall. By the way: %@", [self name], @([self age]), [self interests], @([self height]), [self readonlyproperty]];
@@ -57,7 +59,6 @@
 {
     _height = height;
 }
-
 
 
 @end
